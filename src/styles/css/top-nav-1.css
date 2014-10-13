@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://st.gdefon.com/wallpapers_original/wallpapers/341613_zheleznyj-chelovek_minimalizm_risunok_1920x1080.jpg);
+}
+#navbar-wrapper-horizontal {
+  position: absolute;
+  left: 50%;
+  margin: 0 0 0 -25%;
+  height: 75px;
+  width: auto;
+  top: 0;
+  cursor: default;
+  background-color: #000000;
+}
+#top-nav-1 {
+  padding: 0;
+  margin: 0;
+  height: 73px;
+  font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  position: relative;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  transition: color 0.5s ease;
+  z-index: 20;
+}
+#top-nav-1 .inline {
+  margin: 0;
+  padding: 0;
+  height: 74px;
+  width: 148px;
+  display: inline-block;
+  position: relative;
+  transition-property: color, border;
+  transition-duration: 0.5s, 0.5s;
+  transition-timing-function: ease, ease;
+  border-bottom: 1px solid #000000;
+}
+#top-nav-1 .inline a {
+  top: 25px;
+  position: relative;
+}
+#top-nav-1 .inline:hover {
+  cursor: pointer;
+  color: #baa242;
+  border-top-width: 0;
+  transition-property: color, border;
+  transition-duration: 0.5s, 0.5s;
+  transition-timing-function: ease, ease;
+  border-bottom: 1px solid #baa242;
+}
+#top-nav-1 .inline:hover .nested-list {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#top-nav-1 .inline .nested-list {
+  top: 75px;
+  text-align: center;
+  padding: 0;
+  height: auto;
+  width: inherit;
+  display: block;
+  list-style: none;
+  opacity: 0;
+  position: absolute;
+  background-color: #000000;
+  transition: color 0.5s ease;
+  z-index: 10;
+  border-radius: 0 0 5px 5px;
+}
+#top-nav-1 .inline .nested-list .nest {
+  height: 49.33333333px;
+  padding: 0;
+  color: #ffffff;
+  display: block;
+  transition: color 0.5s ease;
+}
+#top-nav-1 .inline .nested-list .nest a {
+  top: 12.66666667px;
+}
+#top-nav-1 .inline .nested-list .nest:hover {
+  color: #baa242;
+  transition: color 0.5s ease;
+}

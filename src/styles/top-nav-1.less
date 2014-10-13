@@ -1,0 +1,114 @@
+
+//Iron Man Theme
+@nav-bar-color:       #000;
+@font:                'Quicksand';
+@font-size:           24px;
+@font-color:          white;
+@nested-list-height:  @nav-bar-height/1.5;
+@background-color:    black;
+@font-hover-color:    #BAA242;
+@border-size:         1px;
+@border-color:        @font-hover-color;
+@container-height:    75px;
+@nav-bar-height:      (@container-height)-1px;
+
+body {
+  margin: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://st.gdefon.com/wallpapers_original/wallpapers/341613_zheleznyj-chelovek_minimalizm_risunok_1920x1080.jpg);
+}
+
+#navbar-wrapper-horizontal{
+  position: absolute;
+  left: 50%;
+  margin: 0 0 0 -25%;
+  height: @container-height;
+  width: auto;
+  top: 0;
+  cursor: default;
+  background-color: @nav-bar-color;
+
+}
+#top-nav-1{
+  padding: 0;
+  margin: 0;
+  height: @nav-bar-height - 1px;
+  font-size: @font-size;
+  font-family: @font, sans-serif;
+  color: @font-color;
+  position: relative;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  transition: color 0.5s ease;
+  z-index: 20;
+
+  .inline{
+    margin: 0;
+    padding: 0;
+    height: @nav-bar-height;
+    width: @nav-bar-height*2;
+    display: inline-block;
+    position: relative;
+    transition-property: color, border;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease, ease;
+    border-bottom: 1px solid @nav-bar-color;
+
+    a {
+      top:(@nav-bar-height/2) - (@font-size/2);
+      position: relative;
+    }
+
+    &:hover{
+      cursor: pointer;
+      color: @font-hover-color;
+      border-top-width: 0;
+      transition-property: color, border;
+      transition-duration: 0.5s, 0.5s;
+      transition-timing-function: ease, ease;
+      border-bottom: 1px solid @font-hover-color;
+
+
+      .nested-list {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+    }
+
+    .nested-list {
+      top: @container-height;
+      text-align: center;
+      padding: 0;
+      height: auto;
+      width: inherit;
+      display: block;
+      list-style: none;
+      opacity: 0;
+      position: absolute;
+      background-color: @nav-bar-color;
+      transition: color 0.5s ease;
+      z-index: 10;
+      border-radius: 0 0 5px 5px;
+
+      .nest {
+        height: @nested-list-height;
+        padding: 0;
+        color: @font-color;
+        display: block;
+        transition: color 0.5s ease;
+        a {
+          top: (@nested-list-height/2) - (@font-size/2);
+        }
+        &:hover {
+          color: @font-hover-color;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+
+  }
+}
